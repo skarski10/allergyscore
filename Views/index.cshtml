@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Allergy Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Allergy Calculator</h1>
+      </div>
+      <div class="row">
+        <form action="/" method="post">
+          <div class="form-group">
+            <label for="input">Enter your allergy score:</label>
+            <input type="number" name="input" id="input">
+            <button type="submit" class="btn" name="button">Submit</button>
+          </div>
+        </form>
+        <div class="output">
+          @if(Model != null)
+          {
+            <ul>
+              @foreach(var allergy in Model)
+              {
+                <li>@allergy</li>
+              }
+            </ul>
+          }
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
